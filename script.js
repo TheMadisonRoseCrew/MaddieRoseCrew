@@ -1,18 +1,17 @@
 /* =========================================
-   MADDISON ROSE WEBSITE
+   MADISON ROSE WEBSITE
    JAVASCRIPT
 ========================================= */
 
 
 /* =========================================
-   DISCOVER MORE BUTTON
+   DISCOVER MORE
 ========================================= */
 
 function showMessage() {
 
     const message =
         document.getElementById("special-message");
-
 
     if (
         message.style.display === "none" ||
@@ -31,7 +30,7 @@ function showMessage() {
 
 
 /* =========================================
-   EXPLORE BUTTON
+   EXPLORE
 ========================================= */
 
 function scrollToFavorites() {
@@ -46,7 +45,7 @@ function scrollToFavorites() {
 
 
 /* =========================================
-   PRINT ENTIRE PAGE
+   PRINT PAGE
 ========================================= */
 
 function printPage() {
@@ -64,14 +63,12 @@ function favoriteAlert(favorite) {
 
     let message = "";
 
-
     if (favorite === "Cheetahs") {
 
         message =
             "🐆 Cheetahs represent speed, confidence, independence, and freedom!";
 
     }
-
 
     else if (favorite === "Roses") {
 
@@ -80,14 +77,12 @@ function favoriteAlert(favorite) {
 
     }
 
-
     else if (favorite === "Good Energy") {
 
         message =
             "💖 Good energy makes everything better!";
 
     }
-
 
     alert(message);
 
@@ -103,9 +98,8 @@ function sayHello() {
     const message =
         document.getElementById("hello-message");
 
-
     message.textContent =
-        "💕 Hello! Thanks for visiting Maddison Rose's website! 🐆🌹";
+        "💕 Hello! Thanks for visiting Madison Rose's website! 🐆🌹";
 
 }
 
@@ -117,8 +111,7 @@ function sayHello() {
 function printMessage() {
 
     const greeting =
-        "Welcome to the Maddison Rose website! 🐆🌹";
-
+        "Welcome to the Madison Rose website! 🐆🌹";
 
     const printWindow =
         window.open(
@@ -126,7 +119,6 @@ function printMessage() {
             "",
             "width=700,height=500"
         );
-
 
     printWindow.document.write(`
 
@@ -137,11 +129,10 @@ function printMessage() {
         <head>
 
             <title>
-                Maddison Rose Greeting
+                Madison Rose Greeting
             </title>
 
         </head>
-
 
         <body style="
             font-family: Arial;
@@ -151,16 +142,14 @@ function printMessage() {
             color: #2b1721;
         ">
 
-
             <h1 style="
                 color: #d52d7e;
                 font-size: 45px;
             ">
 
-                🐆 Maddison Rose 🌹
+                🐆 Madison Rose 🌹
 
             </h1>
-
 
             <p style="
                 font-size: 22px;
@@ -170,7 +159,6 @@ function printMessage() {
 
             </p>
 
-
             <p>
 
                 Be wild. Be fearless.
@@ -178,13 +166,11 @@ function printMessage() {
 
             </p>
 
-
         </body>
 
         </html>
 
     `);
-
 
     printWindow.document.close();
 
@@ -196,11 +182,10 @@ function printMessage() {
 
 
 /* =========================================
-   ADD ITEMS TO WEBSITE
+   ADD ITEMS
 ========================================= */
 
 function addItem() {
-
 
     const title =
         document
@@ -229,8 +214,6 @@ function addItem() {
             .value;
 
 
-    /* CHECK TITLE */
-
     if (title === "") {
 
         alert(
@@ -241,8 +224,6 @@ function addItem() {
 
     }
 
-
-    /* CHECK DESCRIPTION */
 
     if (description === "") {
 
@@ -255,8 +236,6 @@ function addItem() {
     }
 
 
-    /* CREATE ITEM */
-
     const item = {
 
         id: Date.now(),
@@ -265,41 +244,29 @@ function addItem() {
 
         description: description,
 
-        emoji:
-            emoji || "✨",
+        emoji: emoji || "✨",
 
         category: category
 
     };
 
 
-    /* GET SAVED ITEMS */
-
     let items =
         JSON.parse(
             localStorage.getItem(
-                "maddisonRoseItems"
+                "madisonRoseItems"
             )
         ) || [];
 
 
-    /* ADD NEW ITEM */
-
     items.push(item);
 
 
-    /* SAVE ITEMS */
-
     localStorage.setItem(
-
-        "maddisonRoseItems",
-
+        "madisonRoseItems",
         JSON.stringify(items)
-
     );
 
-
-    /* CLEAR FORM */
 
     document
         .getElementById("item-title")
@@ -316,15 +283,11 @@ function addItem() {
         .value = "";
 
 
-    /* DISPLAY */
-
     displayItems();
 
 
-    /* SUCCESS MESSAGE */
-
     alert(
-        "✨ Your item was added to Maddison's World!"
+        "✨ Your item was added to Madison's World!"
     );
 
 }
@@ -336,7 +299,6 @@ function addItem() {
 
 function displayItems() {
 
-
     const container =
         document.getElementById(
             "user-items"
@@ -346,17 +308,13 @@ function displayItems() {
     let items =
         JSON.parse(
             localStorage.getItem(
-                "maddisonRoseItems"
+                "madisonRoseItems"
             )
         ) || [];
 
 
-    /* CLEAR CONTAINER */
-
     container.innerHTML = "";
 
-
-    /* NOTHING ADDED */
 
     if (items.length === 0) {
 
@@ -380,10 +338,7 @@ function displayItems() {
     }
 
 
-    /* CREATE CARDS */
-
     items.forEach(function(item) {
-
 
         const card =
             document.createElement("div");
@@ -424,9 +379,7 @@ function displayItems() {
 
 
             <button
-
                 class="delete-button"
-
                 onclick="deleteItem(${item.id})">
 
                 🗑 Delete
@@ -444,16 +397,15 @@ function displayItems() {
 
 
 /* =========================================
-   DELETE ITEM
+   DELETE ITEMS
 ========================================= */
 
 function deleteItem(id) {
 
-
     let items =
         JSON.parse(
             localStorage.getItem(
-                "maddisonRoseItems"
+                "madisonRoseItems"
             )
         ) || [];
 
@@ -469,11 +421,8 @@ function deleteItem(id) {
 
 
     localStorage.setItem(
-
-        "maddisonRoseItems",
-
+        "madisonRoseItems",
         JSON.stringify(items)
-
     );
 
 
@@ -488,13 +437,10 @@ function deleteItem(id) {
 
 function escapeHTML(text) {
 
-
     const div =
         document.createElement("div");
 
-
     div.textContent = text;
-
 
     return div.innerHTML;
 
@@ -502,7 +448,7 @@ function escapeHTML(text) {
 
 
 /* =========================================
-   LOAD SAVED ITEMS
+   LOAD WEBSITE
 ========================================= */
 
 window.addEventListener(
@@ -512,7 +458,7 @@ window.addEventListener(
         displayItems();
 
         console.log(
-            "🐆 Maddison Rose website loaded!"
+            "🐆 Madison Rose website loaded!"
         );
 
     }
