@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maddison Rose | Wild & Beautiful</title>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- INTERNAL CSS -->
+    <style>
+
+        .welcome-text {
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        #special-message {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .highlight {
+            color: #ff4fa3;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header id="top">
+
+    <div class="logo">
+        🐆 <span>Maddison</span> Rose
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#favorites">Favorites</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#add-content">Add Stuff</a>
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            WELCOME TO THE WILD SIDE
+        </p>
+
+        <h1>
+            Maddison <span>Rose</span>
+        </h1>
+
+        <p class="welcome-text">
+            Bold. Beautiful. Fearless.
+        </p>
+
+        <p class="hero-description">
+            A little bit of elegance, a little bit of wild,
+            and a whole lot of personality.
+        </p>
+
+        <!-- INLINE CSS REQUIREMENT -->
+
+        <button
+            class="primary-button"
+            onclick="showMessage()"
+            style="background-color:#ff4fa3; color:white;">
+
+            Discover More
+
+        </button>
+
+        <button
+            class="secondary-button"
+            onclick="scrollToFavorites()">
+
+            Explore 🐆
+
+        </button>
+
+        <button
+            class="print-button"
+            onclick="printPage()">
+
+            🖨 Print Page
+
+        </button>
+
+        <p id="special-message">
+
+            ✨
+            <span class="highlight">
+                Maddison Rose
+            </span>
+
+            is one of a kind! 🐆🌹
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section about">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            GET TO KNOW HER
+        </p>
+
+        <h2>
+            About <span>Maddison</span>
+        </h2>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <div class="about-box">
+
+            <div class="large-icon">
+                🌹
+            </div>
+
+            <h3>
+                Beauty & Confidence
+            </h3>
+
+            <p>
+                Maddison Rose represents confidence,
+                individuality, and the freedom to be yourself.
+            </p>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p>
+                Welcome to the official fictional
+                Maddison Rose experience.
+                This website combines elegance with
+                the untamed energy of the cheetah.
+            </p>
+
+            <p>
+                Like a cheetah, Maddison is
+                <strong>
+                    fast, fearless, independent,
+                </strong>
+                and impossible to overlook.
+            </p>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <strong>
+                        100%
+                    </strong>
+
+                    <span>
+                        Unique
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        ∞
+                    </strong>
+
+                    <span>
+                        Confidence
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <strong>
+                        🐆
+                    </strong>
+
+                    <span>
+                        Wild
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAVORITES ================= -->
+
+<section id="favorites" class="section favorites">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            THE MADDISON ROSE COLLECTION
+        </p>
+
+        <h2>
+            Favorite <span>Things</span>
+        </h2>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">
+                🐆
+            </div>
+
+            <h3>
+                Cheetahs
+            </h3>
+
+            <p>
+                Fast, fierce, beautiful,
+                and completely unforgettable.
+            </p>
+
+            <button
+                onclick="favoriteAlert('Cheetahs')">
+
+                Learn More
+
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🌹
+            </div>
+
+            <h3>
+                Roses
+            </h3>
+
+            <p>
+                A symbol of beauty,
+                confidence, elegance, and strength.
+            </p>
+
+            <button
+                onclick="favoriteAlert('Roses')">
+
+                Learn More
+
+            </button>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                💖
+            </div>
+
+            <h3>
+                Good Energy
+            </h3>
+
+            <p>
+                Surround yourself with positive
+                people, memories, and moments.
+            </p>
+
+            <button
+                onclick="favoriteAlert('Good Energy')">
+
+                Learn More
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery" class="section gallery">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            WILD & BEAUTIFUL
+        </p>
+
+        <h2>
+            The <span>Gallery</span>
+        </h2>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-card cheetah-card">
+
+            <div class="gallery-content">
+
+                <span>
+                    🐆
+                </span>
+
+                <h3>
+                    Wild Spirit
+                </h3>
+
+                <p>
+                    Fearless & Free
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-card rose-card">
+
+            <div class="gallery-content">
+
+                <span>
+                    🌹
+                </span>
+
+                <h3>
+                    Rose Energy
+                </h3>
+
+                <p>
+                    Elegant & Strong
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-card pink-card">
+
+            <div class="gallery-content">
+
+                <span>
+                    💗
+                </span>
+
+                <h3>
+                    Good Vibes
+                </h3>
+
+                <p>
+                    Positive Energy
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="gallery-card gold-card">
+
+            <div class="gallery-content">
+
+                <span>
+                    ✨
+                </span>
+
+                <h3>
+                    Shine
+                </h3>
+
+                <p>
+                    Stand Out
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote-section">
+
+    <div class="quote-icon">
+        ❝
+    </div>
+
+    <blockquote>
+        "Be wild. Be fearless.
+        Be unapologetically you."
+    </blockquote>
+
+    <p>
+        — Maddison Rose
+    </p>
+
+</section>
+
+
+<!-- ================= ADD CONTENT ================= -->
+
+<section
+    id="add-content"
+    class="section add-section">
+
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            MAKE IT YOURS
+        </p>
+
+        <h2>
+            Add to <span>Maddison's World</span>
+        </h2>
+
+        <p class="add-description">
+
+            Add your own favorites, memories,
+            posts, quotes, or anything you want
+            to display on the website.
+
+        </p>
+
+    </div>
+
+
+    <!-- FORM -->
+
+    <div class="add-form">
+
+
+        <div class="form-group">
+
+            <label for="item-title">
+                Title
+            </label>
+
+            <input
+                type="text"
+                id="item-title"
+                placeholder="Example: Favorite Song"
+                maxlength="50">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="item-description">
+                Description
+            </label>
+
+            <textarea
+                id="item-description"
+                placeholder="Write something about it..."
+                maxlength="200">
+            </textarea>
+
+        </div>
+
+
+        <div class="form-row">
+
+
+            <div class="form-group">
+
+                <label for="item-emoji">
+                    Emoji
+                </label>
+
+                <input
+                    type="text"
+                    id="item-emoji"
+                    placeholder="🌹"
+                    maxlength="4">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="item-category">
+                    Category
+                </label>
+
+                <select id="item-category">
+
+                    <option value="Favorite">
+                        Favorite
+                    </option>
+
+                    <option value="Memory">
+                        Memory
+                    </option>
+
+                    <option value="Post">
+                        Post
+                    </option>
+
+                    <option value="Quote">
+                        Quote
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="primary-button add-button"
+            onclick="addItem()">
+
+            ➕ Add to Website
+
+        </button>
+
+    </div>
+
+
+    <!-- USER CREATED CARDS -->
+
+    <div
+        id="user-items"
+        class="user-items">
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact">
+
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            SAY HELLO
+        </p>
+
+        <h2>
+            Follow <span>Maddison Rose</span>
+        </h2>
+
+    </div>
+
+
+    <p class="contact-text">
+
+        Thanks for visiting the Maddison Rose website!
+        Follow along on social media. 🐆🌹
+
+    </p>
+
+
+    <div class="social-buttons">
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            href="https://www.instagram.com/madison.rose212?igsi=MTZxY2diMTJsbDZlOQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-button instagram">
+
+            📸 Instagram
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a
+            href="https://www.tiktok.com/@madisonrose212?_r=1&_t=ZP-99R6o0EqmuF"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-button tiktok">
+
+            🎵 TikTok
+
+        </a>
+
+
+        <button
+            class="primary-button"
+            onclick="sayHello()">
+
+            💕 Say Hello
+
+        </button>
+
+
+        <button
+            class="secondary-button"
+            onclick="printMessage()">
+
+            🖨 Print Greeting
+
+        </button>
+
+    </div>
+
+
+    <p id="hello-message"></p>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🐆 Maddison Rose 🌹
+    </div>
+
+    <p>
+        Made with love, creativity,
+        and a little wild energy.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#favorites">
+            Favorites
+        </a>
+
+        <a href="#gallery">
+            Gallery
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 Maddison Rose.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
